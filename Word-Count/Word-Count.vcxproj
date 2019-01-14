@@ -69,6 +69,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\gui\gui.cpp" />
+    <ClCompile Include="src\initializer.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\gui\gui.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="src\initializer.h" />
+    <ClInclude Include="src\main.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gui.resx">
+      <DependentUpon>src\gui\gui.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\gui\gui.resx">
+      <DependentUpon>src\gui\gui.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
